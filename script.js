@@ -1,7 +1,8 @@
 
 let input = document.getElementById("input")
 let MsgReq = document.getElementById("searchRequestMessage")
-async function searchImages(){
+async function searchImages(event){
+    event.preventDefault()
     let responseData = await fetch(`https://pixabay.com/api/?key=48900646-b33b7907a25dd06f689e01c19&q=${input.value}&image_type=photo`)
     input.value = " ";
     let resultData = await responseData.json()
