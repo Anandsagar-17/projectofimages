@@ -1,0 +1,43 @@
+#cardsContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+img{
+    height: 300px;
+    width: 400px;
+}
+
+#msg{
+    display: block;
+    margin-left: 38%;
+    height: 100px;
+    width: 450px;
+    align-content: center;
+    font-size: xx-large;
+    padding: 10px;
+    margin-top: 50px;
+    box-shadow: 2px 2px 5px black;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 768px) {
+    #cardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #cardsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #msg{
+        margin-left: 30px;
+        height: 100px;
+        width: 200px;
+        font-size: small;
+        padding: 10px;
+        box-shadow: 2px 2px 5px black;
+    }
+}
